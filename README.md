@@ -26,6 +26,8 @@ Then app.properties file inside the project resource directory need to modify wi
 
 ![alttext](https://github.com/myCamundaProjects/Camunda-exportProductCatalogue/blob/main/images/AppProperties.PNG?raw=true)
 
+Then bulild the application.
+
 ## Deployment to Tomcat Application Server
 
 As camunda workflow allows to download exported items, context path need to be set to the local export path.
@@ -33,7 +35,8 @@ Before deploying to the application server. ContextPath need to be set
 eg: if the context path used is `/export/data`. A file named `export#data.xml` need to be added in 
 `$CATALINA_HOME/conf/{enginename}/{hostname}/`
 If the locat export directory is `D:/data/` (exportDir=D:/data/ in app.properties)
+
 ![alttext](https://github.com/myCamundaProjects/Camunda-exportProductCatalogue/blob/main/images/contextXML.PNG?raw=true)
 
-Then bulild the application and copy the *.war file from the `target` directory to the deployment directory of your application server e.g. `$CATALINA_HOME/webapps`
+ Copy the *.war file from the `target` directory to the deployment directory of your application server e.g. `$CATALINA_HOME/webapps`
 
