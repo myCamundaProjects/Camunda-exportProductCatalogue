@@ -24,7 +24,6 @@ mvn clean package
 ```
 2. Copy the *.war file from the `target` directory to the deployment directory
 of your application server e.g. `tomcat/webapps` or `wildfly/standalone/deployments`.
-For a faster 1-click (re-)deployment see the alternatives below.
 
 ### Run and Inspect with Tasklist and Cockpit
 Once you deployed the application you can run it using
