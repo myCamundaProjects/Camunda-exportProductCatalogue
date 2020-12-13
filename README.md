@@ -1,4 +1,6 @@
 # camunda-exportProductCatalogue
+This application is to export data set in postgreSQL database in to csv files. 
+The application and workflow are decribed in the [Blog on Medium](https://medium.com/@contactchanaka/database-postgresql-browser-with-talend-esb-a0b9a28469a2).
 
 ## Build in Eclipse IDE
 
