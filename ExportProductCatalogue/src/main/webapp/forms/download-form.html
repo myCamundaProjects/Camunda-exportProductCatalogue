@@ -1,0 +1,33 @@
+<form name="displayDownload" role="form">
+
+  <script cam-script type="text/form-script">
+
+    camForm.on('form-loaded', function() {
+      // fetch the variable named 'archiveList'
+      camForm.variableManager.fetchVariable('archiveList');
+    });
+
+    camForm.on('variables-fetched', function() {
+      // after the variables are fetched, bind the value of archiveList to a angular
+      // scope value such that the form can work on it
+      $scope.archiveList = camForm.variableManager.variable('archiveList').value;
+    });
+
+    camForm.on('submit', function() {
+//      // remove '$$hashKey' properties from archive objects
+//      angular.forEach($scope.archiveList.pathList, function(archive) {
+//        delete archive.$$hashKey;
+//      });
+    });
+
+  </script>
+
+  <h3><strong>List of exported files</strong></h3>
+  <br>
+   <table style="width:100%;border: 2px solid black;">
+        <tr ng-repeat="archive in archiveList.pathList" style="border: 1px solid black;">
+            <td>{{archive}}</td>
+           	<td><button><a href={{archiveList.contextPath}}{{archive}} download>Click to Download!</a></button></td>
+        </tr>
+    </table>
+</form>
