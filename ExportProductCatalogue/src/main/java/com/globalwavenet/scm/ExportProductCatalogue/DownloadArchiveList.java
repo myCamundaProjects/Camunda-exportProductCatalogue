@@ -36,7 +36,7 @@ public class DownloadArchiveList implements JavaDelegate {
 			}else {
 				throw new Exception();
 			}
-		}catch(Exception e){
+		}catch(Throwable e){
 			e.printStackTrace();
 			throw new BpmnError("DownloadError", "Error during list archieve");
 		}finally {

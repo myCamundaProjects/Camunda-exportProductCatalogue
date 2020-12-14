@@ -41,7 +41,7 @@ public class CompensateExport implements JavaDelegate {
 				throw new Exception();
 			} 
 				
-		}catch(Exception e){
+		}catch(Throwable e){
 			e.printStackTrace();
 			throw new BpmnError("ExportError", "Error during compensating export");
 		}finally {

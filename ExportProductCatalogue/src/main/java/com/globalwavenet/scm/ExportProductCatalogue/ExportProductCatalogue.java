@@ -30,7 +30,7 @@ public class ExportProductCatalogue implements JavaDelegate {
 			String postgresPass=prop.get("postgresPass").toString();
 			String postgresDatabase=prop.get("postgresDatabase").toString();
 			String partnerManagementEndPoint=prop.get("partnerManagementEndPoint").toString();
-			String prtnerManagementPartnersRelativePath=prop.get("prtnerManagementPartnersRelativePath").toString();
+			String partnerManagementPartnersRelativePath=prop.get("partnerManagementPartnersRelativePath").toString();
 			String exportDir=prop.get("exportDir").toString();
 			String exportFileDir = (String)execution.getVariable("exportFileDir");
 	        String exportOutputDir=exportDir + "/" + exportFileDir + "/";
@@ -44,12 +44,16 @@ public class ExportProductCatalogue implements JavaDelegate {
 										"--context_param postgresPass="+postgresPass,
 										"--context_param postgresDatabase="+postgresDatabase,
 										"--context_param partnerManagementEndPoint="+partnerManagementEndPoint,
-										"--context_param prtnerManagementPartnersRelativePath="+prtnerManagementPartnersRelativePath,
+										"--context_param partnerManagementPartnersRelativePath="+partnerManagementPartnersRelativePath,
 										"--context_param exportOutput="+exportOutput
 										});
-										
+			System.out.println("Talend ExportProductCatalogue : " + talendJob.getStatus());
+			if (!talendJob.getStatus().equals("end")) {
+				talendJob.destroy();
+				throw new Exception();
+			}
 			talendJob.destroy();
-		}catch(Exception e){
+		}catch(Throwable e){
 			e.printStackTrace();
 			throw new BpmnError("ExportError", "Error during exporting product catalogue ");
 		}finally {

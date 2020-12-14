@@ -47,7 +47,7 @@ public class ArchiveDirectory implements JavaDelegate {
 			}else {
 				throw new Exception();
 			}
-		}catch(Exception e){
+		}catch(Throwable e){
 			e.printStackTrace();
 			throw new BpmnError("ArchiveError", "Error during archiving directory");
 		}finally {

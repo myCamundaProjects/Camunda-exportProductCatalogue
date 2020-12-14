@@ -143,7 +143,7 @@
   <bpmn:error id="Error_1d6weoh" name="ProcessError" />
   <bpmn:error id="Error_04ojmeg" name="ExportError" />
   <bpmn:error id="Error_0a4gc9i" name="ExportErrorOut" errorCode="#{ExportErrorCode}" camunda:errorMessage="#{ExportErrorMessage}" />
-  <bpmn:error id="Error_1pttwcx" name="ZipErrorOut" errorCode="#{ZipErrorCode}" camunda:errorMessage="#{ZipErrorMessage}" />
+  <bpmn:error id="Error_1pttwcx" name="ArchiveErrorOut" errorCode="#{ArchiveErrorCode}" camunda:errorMessage="#{ArchiveErrorMessage}" />
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="ExportProductCatalogueProcess">
       <bpmndi:BPMNShape id="StartEvent_1l7dw5h_di" bpmnElement="StartEvent_1l7dw5h">

@@ -39,7 +39,7 @@ public class CreateDirectory implements JavaDelegate {
 			}else {
 				throw new Exception();
 			} 	
-		}catch(Exception e){
+		}catch(Throwable e){
 			e.printStackTrace();
 			throw new BpmnError("ExportError", "Error during create directory");
 		}finally {
