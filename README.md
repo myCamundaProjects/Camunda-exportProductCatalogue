@@ -1,6 +1,8 @@
 # camunda-exportProductCatalogue
 This application is to export data set in postgreSQL database in to csv files. 
 
+![alttext](https://github.com/myCamundaProjects/Camunda-exportProductCatalogue/blob/main/images/BPMN-ExportProductCatalogue.png?raw=true)
+
 ## Build in Eclipse IDE
 
 After opening of the project in the IDE(eclipse), build path need to be configured.
